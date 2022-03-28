@@ -1,0 +1,48 @@
+﻿<Window x:Class="MenuDeCinta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MenuDeCinta.Proyectos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MenuCinta></local:MenuCinta>
+    </Window.DataContext>
+    <Grid Background="BlueViolet">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Ribbon x:Name="RibbonWin"  SelectedIndex="0">
+            <!-- Ribbon Tab #1: Home -->
+            <RibbonTab Header="Home" KeyTip="H" Background="AliceBlue">
+                <!-- Home  group-->
+                <!-- Employee And Payroll group-->
+                <RibbonGroup x:Name="Proyecto1" Header="Proyecto 1">
+                    <RibbonButton LargeImageSource="/p1.jpg" Label="Panel Football " KeyTip="V" Command="{Binding TableroCommand}">
+                    </RibbonButton>
+                </RibbonGroup>
+                <RibbonGroup x:Name="Proyecto2" Header="Proyecto 2" Background="#EFD3F5">
+                    <RibbonButton LargeImageSource="\p2.jpg" Label="Contador" KeyTip="V" Command="{Binding ContadorCommand}">
+                    </RibbonButton>
+                </RibbonGroup>
+                <RibbonGroup x:Name="Proyecto3" Header="Proyecto 3">
+                    <RibbonButton LargeImageSource="\p3.png" Label="Aprendiendo Binario" KeyTip="V" Command="{Binding BinarioCommand}">
+                    </RibbonButton>
+                </RibbonGroup>
+                <RibbonGroup x:Name="Proyecto4" Header="Proyecto 4" Background="#EFD3F5">
+                    <RibbonButton LargeImageSource="\p4.png" Label="Operaciones Fracciones" KeyTip="V" Command="{Binding FraccionesCommand}">
+                    </RibbonButton>
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+    </Grid>
+    <Window.Resources>
+        <Style TargetType="RibbonGroup">
+            <Setter Property="Background" Value="#F4E2F5"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontFamily" Value="Verdana"></Setter>
+        </Style>
+    </Window.Resources>
+</Window>

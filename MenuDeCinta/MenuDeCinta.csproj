@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Proyectos\Proyecto2Contador\**" />
+    <Compile Remove="Proyectos\Proyecto3Binario\**" />
+    <Compile Remove="Proyectos\Proyecto4Fracciones\**" />
+    <EmbeddedResource Remove="Proyectos\Proyecto2Contador\**" />
+    <EmbeddedResource Remove="Proyectos\Proyecto3Binario\**" />
+    <EmbeddedResource Remove="Proyectos\Proyecto4Fracciones\**" />
+    <None Remove="Proyectos\Proyecto2Contador\**" />
+    <None Remove="Proyectos\Proyecto3Binario\**" />
+    <None Remove="Proyectos\Proyecto4Fracciones\**" />
+    <Page Remove="Proyectos\Proyecto2Contador\**" />
+    <Page Remove="Proyectos\Proyecto3Binario\**" />
+    <Page Remove="Proyectos\Proyecto4Fracciones\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="mexico.png" />
+    <None Remove="p1.jpg" />
+    <None Remove="p2.jpg" />
+    <None Remove="p3.png" />
+    <None Remove="p4.png" />
+    <None Remove="poland.png" />
+    <None Remove="Proyectos\Proyecto4\igual.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="mexico.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="p1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="p2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="p3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="p4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="poland.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Proyectos\Proyecto4\igual.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Proyectos\Proyecto3\" />
+    <Folder Include="Proyectos\Proyecto2\" />
+    <Folder Include="Proyectos\Proyecto1\" />
+  </ItemGroup>
+
+</Project>
