@@ -55,6 +55,9 @@
                 <Border CornerRadius="5" BorderThickness="7" BorderBrush="#4B78F0" Margin="10,20">
                     <Button Command="{Binding LimpiarFraccionesCommand}">LIMPIAR</Button>
                 </Border>
+                <Border CornerRadius="5" BorderThickness="7" BorderBrush="#4B78F0" Margin="130, 0, 0, 20" Width="300">
+                    <Button Command="{Binding SalirCommand}">Salir</Button>
+                </Border>
             </WrapPanel>
         </Border>
     </StackPanel>

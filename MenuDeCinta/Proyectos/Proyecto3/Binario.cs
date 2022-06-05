@@ -10,18 +10,18 @@ using System.Windows.Input;
 namespace S4U1ConvertirBinario
 {
     public class Binario:INotifyPropertyChanged
-    {
+    {   //COMMANDS
         public ICommand GenerarBinarioCommand { get; set; }
-        public ICommand VerificarCommand { get; set; }
-
-        public string NumeroBinario { get; set; }
-        public int NumeroDecimalReal { get; set; }
-        public int? NumeroDecimalUsuario { get; set; }
+        public ICommand VerificarBinarioCommand { get; set; }
+        
+        public string NumBinario { get; set; }
+        public int NumDecimalReal { get; set; }
+        public int? NumDecimalUsuario { get; set; }
 
         public Binario()
         {
             GenerarBinarioCommand = new RelayCommand(GenerarBinario);
-            VerificarCommand = new RelayCommand(Verificar);
+            VerificarBinarioCommand = new RelayCommand(Verificar);
         }
 
         public bool? Ganado { get; set; }
@@ -33,8 +33,8 @@ namespace S4U1ConvertirBinario
         public void GenerarBinario()
         {
             Random r = new();
-            NumeroDecimalReal = r.Next(1, 255);
-            NumeroBinario = Convert.ToString(NumeroDecimalReal, 2);
+            NumDecimalReal = r.Next(1, 255);
+            NumBinario = Convert.ToString(NumDecimalReal, 2);
             JuegoIniciado = true;
             Ganado = null;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
@@ -42,17 +42,17 @@ namespace S4U1ConvertirBinario
 
         public void Verificar()
         {
-            if (NumeroDecimalUsuario == NumeroDecimalReal)
+            if (NumDecimalUsuario == NumDecimalReal)
             {
                 Ganado = true;
-                NumeroDecimalUsuario = null;
-                Mensaje = "¡Acertaste!";
+                NumDecimalUsuario = null;
+                Mensaje = "¡ES VALOR ES CORRECTO!";
             }
             else
             {
                 Ganado = false;
-                NumeroDecimalUsuario = null;
-                Mensaje = "EL VALOR ES INCORRECTO";
+                NumDecimalUsuario = null;
+                Mensaje = "¡EL VALOR ES INCORRECTO!";
             }
 
             JuegoIniciado = false;

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace S4U1CalculadoraFracciones
@@ -16,12 +17,22 @@ namespace S4U1CalculadoraFracciones
             SumarFraccionesCommand = new RelayCommand(Sumar);
             RestarFraccionesCommand = new RelayCommand(Restar);
             LimpiarFraccionesCommand = new RelayCommand(Limpiar);
+            SalirCommand = new RelayCommand(Salir);
+
+          
+        }
+
+        private void Salir()
+        {
+            System.Windows.Application.Current.Shutdown();
+            //Application.Current.MainWindow.Close();
 
         }
+
         public ICommand SumarFraccionesCommand { get; set; }
         public ICommand RestarFraccionesCommand { get; set; }
         public ICommand LimpiarFraccionesCommand { get; set; }
-
+        public ICommand SalirCommand { get; set; }
 
         private int resultadoNumerador;
 

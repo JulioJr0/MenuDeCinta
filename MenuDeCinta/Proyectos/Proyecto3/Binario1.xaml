@@ -20,14 +20,14 @@
         <DockPanel Margin="5">
             <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" Foreground="#FFBD0000" Margin="0,0,0,15" Text="{Binding Mensaje}"></TextBlock>
             <TextBlock DockPanel.Dock="Top">Valor Binario:</TextBlock>
-            <TextBox DockPanel.Dock="Top" Text="{Binding NumeroBinario}"></TextBox>
+            <TextBox DockPanel.Dock="Top" Text="{Binding NumBinario}"></TextBox>
             <TextBlock DockPanel.Dock="Top">Valor decimal:</TextBlock>
-            <TextBox x:Name="Number" DockPanel.Dock="Top" Text="{Binding NumeroDecimalUsuario}" IsEnabled="True"></TextBox>
+            <TextBox x:Name="Number" DockPanel.Dock="Top" Text="{Binding NumDecimalUsuario}" IsEnabled="True"></TextBox>
             <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button Content="Nuevo" Command="{Binding GenerarBinarioCommand}">
 
                 </Button>
-                <Button Content="Verificar" Command="{Binding VerificarCommand}" CommandParameter="">
+                <Button Content="Verificar" Command="{Binding VerificarBinarioCommand}">
                    
                 </Button>
             </WrapPanel>
